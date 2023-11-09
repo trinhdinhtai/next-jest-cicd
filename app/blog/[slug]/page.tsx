@@ -1,13 +1,18 @@
 type Params = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 export async function generateMetadata({ params }: Params) {
-  return { title: `Post: ${params.slug}` }
+  return { title: `Post: ${params.slug}` };
 }
 
 export default function Page({ params }: Params) {
-  return <h1>Slug: {params.slug}</h1>
+  return (
+    <>
+      <h1>Slug: {params.slug}</h1>
+      <h1>Trịnh Đình Tài</h1>
+    </>
+  );
 }
